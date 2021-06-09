@@ -9,59 +9,31 @@ module.exports = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "planana", // Usually your GitHub org/user name.
-  projectName: "planana.ca", // Usually your repo name.
+  organizationName: "planana",
+  projectName: "planana.ca",
   themeConfig: {
+    colorMode: {
+      defaultMode: "dark",
+      switchConfig: {
+        darkIcon: "🍓",
+        lightIcon: "🍌",
+      },
+    },
     navbar: {
-      title: "Planana",
       logo: {
         alt: "Planana Logo",
         src: "img/logo.svg",
       },
       items: [
-        {
-          type: "doc",
-          docId: "intro",
-          position: "left",
-          label: "Tutorial",
-        },
+        { to: "/about", label: "About", position: "left" },
+        { to: "/blog", label: "Our Team", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { href: githubUrl, label: "GitHub", position: "right" },
       ],
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [{ label: "Tutorial", to: "/docs/intro" }],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            { label: "Blog", to: "/blog" },
-            { label: "GitHub", href: githubUrl },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Planana, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Planana. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -70,12 +42,10 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl: `${githubUrl}/edit/master/`,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl: `${githubUrl}/edit/master/blog/`,
         },
         theme: {

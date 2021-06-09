@@ -7,13 +7,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #ffc845;
-  --ifm-color-primary-dark: #ffbe25;
-  --ifm-color-primary-darker: #ffba14;
-  --ifm-color-primary-darkest: #e3a000;
-  --ifm-color-primary-light: #ffd265;
-  --ifm-color-primary-lighter: #ffd676;
-  --ifm-color-primary-lightest: #ffe5a6;
+  --ifm-color-primary: #f8b739;
+  --ifm-color-primary-dark: #f7ac1c;
+  --ifm-color-primary-darker: #f6a70d;
+  --ifm-color-primary-darkest: #ce8b07;
+  --ifm-color-primary-light: #f9c256;
+  --ifm-color-primary-lighter: #fac765;
+  --ifm-color-primary-lightest: #fbd791;
   --ifm-code-font-size: 95%;
 }
 
@@ -22,4 +22,81 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TEXT */
+.title {
+  padding: 1rem 0;
+  font-family: "Montserrat";
+  font-size: 56px;
+}
+.body {
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+
+/* CONTAINERS */
+.screen {
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+  max-width: var(--ifm-container-width);
+  width: 100%;
+  max-height: var(--ifm-container-height);
+  height: 100%;
+}
+.text-box {
+  width: 70%;
+}
+.img-rectangle {
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 50%;
+  height: auto;
+  margin: 4vh auto;
+}
+.img-circle {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 20%;
+  border-radius: 50%;
+}
+.headerLine {
+  background: var(--ifm-font-color-base);
+  height: 4px;
+  width: 95%;
+  margin-bottom: 4vh;
+}
+
+/* ANIMATION */
+.slide-in-left {
+  animation: slideInLeft 0.75s ease 0s 1 normal both;
+}
+.slide-in-right {
+  animation: slideInRight 0.75s ease 0s 1 normal both;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
