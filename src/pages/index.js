@@ -4,21 +4,6 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="screen">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">
-          The mon
-          <b>KEY</b> behind event planning.
-        </p>
-      </div>
-    </header>
-  );
-}
-
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -26,8 +11,19 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
-      <main>{/* <HomepageFeatures /> */}</main>
+      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+        <div className="screen">
+          <h1 className="hero__title">Planana</h1>
+          <p className="hero__subtitle">
+            The mon
+            <b>KEY</b> behind event planning.
+          </p>
+          <form>
+            <label>Subscribe to our latest plans: </label>
+            <input type="email" id="email" name="email"></input>
+          </form>
+        </div>
+      </header>
     </Layout>
   );
 }
