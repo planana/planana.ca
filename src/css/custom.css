@@ -76,10 +76,6 @@
 .slide-in-left {
   animation: slideInLeft 0.75s ease 0s 1 normal both;
 }
-.slide-in-right {
-  animation: slideInRight 0.75s ease 0s 1 normal both;
-}
-
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -90,6 +86,10 @@
     transform: translateX(0);
   }
 }
+
+.slide-in-right {
+  animation: slideInRight 0.75s ease 0s 1 normal both;
+}
 @keyframes slideInRight {
   0% {
     opacity: 0;
@@ -98,5 +98,16 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.75s ease 0s 1 normal both;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
   }
 }

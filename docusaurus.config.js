@@ -26,7 +26,7 @@ module.exports = {
       },
       items: [
         { to: "/about", label: "About", position: "left" },
-        { to: "/blog", label: "Our Team", position: "left" },
+        { to: "/team", label: "Our Team", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { href: githubUrl, label: "GitHub", position: "right" },
       ],
