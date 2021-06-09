@@ -11,7 +11,7 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <main className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="screen">
           <h1 className="hero__title">Planana</h1>
           <p className="hero__subtitle">
@@ -23,7 +23,7 @@ export default function Home() {
             <input type="email" id="email" name="email"></input>
           </form>
         </div>
-      </header>
+      </main>
     </Layout>
   );
 }
