@@ -13,18 +13,14 @@ module.exports = {
   projectName: "planana.ca", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Planana",
+      // title: "Planana",
       logo: {
         alt: "Planana Logo",
         src: "img/logo.svg",
       },
       items: [
-        {
-          type: "doc",
-          docId: "intro",
-          position: "left",
-          label: "Tutorial",
-        },
+        { to: "/about", label: "About", position: "left" },
+        { to: "/blog", label: "Our Team", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { href: githubUrl, label: "GitHub", position: "right" },
       ],
