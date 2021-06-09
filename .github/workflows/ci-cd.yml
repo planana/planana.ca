@@ -1,0 +1,19 @@
+name: Planana CI/CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build docusaurus project on our Planana Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PLANANA_HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.PLANANA_USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: build-planana
