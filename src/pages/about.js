@@ -4,9 +4,11 @@ import Layout from "@theme/Layout";
 
 export default function AboutPage() {
   return (
-    <Layout title="Our Story" description="Planana's mission or something">
+    <Layout title="About" description="Planana's mission or something">
       <div className="container">
-        <p className="title text--center slide-in-left"> PLANANA AAAA</p>
+        <p className="title text--center slide-in-left">
+          This is our story. This is Planana.
+        </p>
         <div
           className="headerLine centered slide-in-left"
           style={{ animationDelay: "0.5s" }}
@@ -16,7 +18,7 @@ export default function AboutPage() {
             className="body text--center fadeIn"
             style={{ animationDelay: "1s" }}
           >
-            We are planananananaaanananananananaanananannanaaaaaaaaaaaaaaaaaaaa
+            Our mission is blah blah blah
           </p>
         </div>
         <div className="fadeIn" style={{ animationDelay: "1.5s" }}></div>
