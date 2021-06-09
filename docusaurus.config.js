@@ -12,6 +12,13 @@ module.exports = {
   organizationName: "planana",
   projectName: "planana.ca",
   themeConfig: {
+    colorMode: {
+      defaultMode: "dark",
+      switchConfig: {
+        darkIcon: "🍓",
+        lightIcon: "🍌",
+      },
+    },
     navbar: {
       logo: {
         alt: "Planana Logo",
