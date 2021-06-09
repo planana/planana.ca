@@ -23,3 +23,80 @@
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TEXT */
+.title {
+  padding: 1rem 0;
+  font-family: "Montserrat";
+  font-size: 56px;
+}
+.body {
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+
+/* CONTAINERS */
+.screen {
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+  max-width: var(--ifm-container-width);
+  width: 100%;
+  max-height: var(--ifm-container-height);
+  height: 100%;
+}
+.text-box {
+  width: 70%;
+}
+.img-rectangle {
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 50%;
+  height: auto;
+  margin: 4vh auto;
+}
+.img-circle {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 20%;
+  border-radius: 50%;
+}
+.headerLine {
+  background: var(--ifm-font-color-base);
+  height: 4px;
+  width: 95%;
+  margin-bottom: 4vh;
+}
+
+/* ANIMATION */
+.slide-in-left {
+  animation: slideInLeft 0.75s ease 0s 1 normal both;
+}
+.slide-in-right {
+  animation: slideInRight 0.75s ease 0s 1 normal both;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
