@@ -4,8 +4,8 @@ const githubUrl = "https://github.com/planana/planana.ca";
 module.exports = {
   title: "Planana",
   tagline: "The monKEY to event planning",
-  url: "https://planana.github.io",
-  baseUrl: "/planana.ca/",
+  url: "https://planana.ca",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
