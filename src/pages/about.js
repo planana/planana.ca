@@ -4,7 +4,7 @@ import Layout from "@theme/Layout";
 
 export default function AboutPage() {
   return (
-    <Layout title="About" description="Planana's mission or something">
+    <Layout title="About" description="Planana's Mission">
       <div className="container">
         <p className="title text--center slide-in-left">
           This is our story. This is Planana.
