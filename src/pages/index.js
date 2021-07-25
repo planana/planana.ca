@@ -28,12 +28,12 @@ export default function Home() {
 
   async function handler(e) {
     e.preventDefault();
-    await fetch("/subscribe", {
+    await fetch("/subscribe/", {
+      method: "POST",
       body: JSON.stringify({ name, email }),
       headers: {
         "Content-Type": "application/json",
       },
-      method: "POST",
     });
     setSubmitted(true);
   }
