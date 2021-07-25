@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+.subscribeForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
