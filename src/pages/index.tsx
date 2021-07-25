@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, {
+  ChangeEvent,
+  Dispatch,
+  FormEvent,
+  SetStateAction,
+  useState,
+} from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 
-function useInputField(name, type, placeholder) {
+type UseInputFieldFn = (
+  name: string,
+  type: string,
+  placeholder: string
+) => UseInputField;
+type UseInputField = [string, JSX.Element, Dispatch<SetStateAction<string>>];
+const useInputField: UseInputFieldFn = (name, type, placeholder) => {
   const [value, setValue] = useState("");
-  const handler = (e) => setValue(e.target.value);
+  const handler = (e: ChangeEvent<HTMLInputElement>) =>
+    setValue(e.target.value);
   const element = (
     <input
       name={name}
@@ -18,7 +31,7 @@ function useInputField(name, type, placeholder) {
   );
 
   return [value, element, setValue];
-}
+};
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -26,14 +39,12 @@ export default function Home() {
   const [name, nameInput] = useInputField("name", "text", "Your name");
   const [email, emailInput] = useInputField("email", "email", "Email Address");
 
-  async function handler(e) {
+  async function handler(e: FormEvent) {
     e.preventDefault();
     await fetch("/subscribe/", {
       method: "POST",
       body: JSON.stringify({ name, email }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
     });
     setSubmitted(true);
   }
