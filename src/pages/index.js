@@ -28,7 +28,7 @@ export default function Home() {
 
   async function handler(e) {
     e.preventDefault();
-    const res = await fetch("http://localhost/subscribe", {
+    await fetch("/subscribe", {
       body: JSON.stringify({ name, email }),
       headers: {
         "Content-Type": "application/json",
