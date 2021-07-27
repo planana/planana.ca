@@ -1,6 +1,6 @@
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.teamImage {
+  max-width: 20vw;
+}
+.teamRow {
+  display: flex;
 }

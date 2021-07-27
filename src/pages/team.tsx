@@ -1,6 +1,11 @@
 import React, { FC } from "react";
 import "../css/custom.css";
+import styles from "./team.module.css";
 import Layout from "@theme/Layout";
+
+const Image: FC<{ name: string }> = ({ name }) => (
+  <img src={`/img/team/${name}.jpg`} className={styles.teamImage} />
+);
 
 const TeamPage: FC = () => (
   <Layout title="Our Team" description="Planana team">
@@ -19,6 +24,12 @@ const TeamPage: FC = () => (
         </p>
       </div>
       <div className="fadeIn" style={{ animationDelay: "1.5s" }}></div>
+      <div className={styles.teamRow}>
+        <Image name="david" />
+        <Image name="annette" />
+        <Image name="will" />
+        <Image name="charles" />
+      </div>
     </div>
   </Layout>
 );
